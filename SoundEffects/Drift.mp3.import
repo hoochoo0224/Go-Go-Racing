@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Drift.mp3-1ecc0f6fc30591552a234734e6521454.mp3str"
+
+[deps]
+
+source_file="res://SoundEffects/Drift.mp3"
+dest_files=[ "res://.import/Drift.mp3-1ecc0f6fc30591552a234734e6521454.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

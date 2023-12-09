@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/TruckAccelerating.mp3-241baedebe2c95b4dd5a375e3d9f4b32.mp3str"
+
+[deps]
+
+source_file="res://SoundEffects/TruckAccelerating.mp3"
+dest_files=[ "res://.import/TruckAccelerating.mp3-241baedebe2c95b4dd5a375e3d9f4b32.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

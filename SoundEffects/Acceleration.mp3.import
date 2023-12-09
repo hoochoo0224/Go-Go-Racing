@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Acceleration.mp3-bfae6e9ab4006dd62524018b3a5a73f4.mp3str"
+
+[deps]
+
+source_file="res://SoundEffects/Acceleration.mp3"
+dest_files=[ "res://.import/Acceleration.mp3-bfae6e9ab4006dd62524018b3a5a73f4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
