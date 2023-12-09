@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/julia.mp3-bc349e6a240fcbdd26a0c4f9ee0aaadc.mp3str"
+
+[deps]
+
+source_file="res://BGMs/julia.mp3"
+dest_files=[ "res://.import/julia.mp3-bc349e6a240fcbdd26a0c4f9ee0aaadc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

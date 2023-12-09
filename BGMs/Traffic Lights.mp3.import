@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Traffic Lights.mp3-ef27667c0457d7d11fe6bb5534f2836e.mp3str"
+
+[deps]
+
+source_file="res://BGMs/Traffic Lights.mp3"
+dest_files=[ "res://.import/Traffic Lights.mp3-ef27667c0457d7d11fe6bb5534f2836e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

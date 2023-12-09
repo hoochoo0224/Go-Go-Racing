@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/kl-peach-game-over.mp3-0c4c587c7f8c21dbfc7d39f265e459ff.mp3str"
+
+[deps]
+
+source_file="res://BGMs/kl-peach-game-over.mp3"
+dest_files=[ "res://.import/kl-peach-game-over.mp3-0c4c587c7f8c21dbfc7d39f265e459ff.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

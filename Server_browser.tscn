@@ -1,0 +1,159 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Font/Giants-Inline.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Server_browser.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=29]
+size = 22
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=30]
+bg_color = Color( 0.196078, 0.764706, 0.760784, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.0862745, 0.662745, 0.631373, 1 )
+shadow_color = Color( 0.0823529, 0.172549, 0.168627, 0.6 )
+shadow_size = 5
+shadow_offset = Vector2( 4, 4 )
+
+[sub_resource type="StyleBoxFlat" id=31]
+bg_color = Color( 0.196078, 0.764706, 0.760784, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.0862745, 0.662745, 0.631373, 1 )
+shadow_color = Color( 0.0823529, 0.172549, 0.168627, 0.6 )
+shadow_size = 3
+shadow_offset = Vector2( 2, 2 )
+
+[sub_resource type="StyleBoxFlat" id=32]
+bg_color = Color( 0.196078, 0.764706, 0.760784, 1 )
+shadow_color = Color( 0.0823529, 0.172549, 0.168627, 0.6 )
+shadow_size = 5
+shadow_offset = Vector2( 4, 4 )
+
+[sub_resource type="DynamicFont" id=27]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=28]
+bg_color = Color( 0.709804, 0.796078, 0.819608, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 2
+border_color = Color( 0.219608, 0.635294, 0.631373, 1 )
+
+[sub_resource type="DynamicFont" id=33]
+size = 64
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 35
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.196078, 0.764706, 0.760784, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.0862745, 0.662745, 0.631373, 1 )
+shadow_color = Color( 0.0823529, 0.172549, 0.168627, 0.6 )
+shadow_size = 5
+shadow_offset = Vector2( 4, 4 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.196078, 0.764706, 0.760784, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.0862745, 0.662745, 0.631373, 1 )
+shadow_color = Color( 0.0823529, 0.172549, 0.168627, 0.6 )
+shadow_size = 3
+shadow_offset = Vector2( 2, 2 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.196078, 0.764706, 0.760784, 1 )
+shadow_color = Color( 0.0823529, 0.172549, 0.168627, 0.6 )
+shadow_size = 5
+shadow_offset = Vector2( 4, 4 )
+
+[node name="Server_browser" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Background_panel" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.65098, 0.788235, 0.796078, 0.686275 )
+
+[node name="Go_back" type="Button" parent="Background_panel"]
+margin_left = 918.0
+margin_top = 11.0
+margin_right = 1010.0
+margin_bottom = 49.0
+custom_fonts/font = SubResource( 29 )
+custom_styles/hover = SubResource( 30 )
+custom_styles/pressed = SubResource( 31 )
+custom_styles/normal = SubResource( 32 )
+text = "뒤로"
+
+[node name="Server_ip_text_edit" type="LineEdit" parent="Background_panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -267.5
+margin_top = 30.0
+margin_right = 269.5
+margin_bottom = 92.0
+custom_colors/font_color = Color( 0.34902, 0.34902, 0.34902, 1 )
+custom_fonts/font = SubResource( 27 )
+custom_styles/normal = SubResource( 28 )
+align = 1
+placeholder_text = "IP주소를 적어주세요"
+caret_blink = true
+caret_blink_speed = 0.5
+__meta__ = {
+"_edit_group_": true,
+"_editor_description_": ""
+}
+
+[node name="Type_in_server_ip" type="Label" parent="Background_panel/Server_ip_text_edit"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -285.0
+margin_top = -195.0
+margin_right = 285.0
+margin_bottom = -104.0
+custom_fonts/font = SubResource( 33 )
+text = "방의 IP를 적어주세요"
+
+[node name="Join_server" type="Button" parent="Background_panel/Server_ip_text_edit"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -150.0
+margin_top = 81.0
+margin_right = 150.0
+margin_bottom = 136.0
+custom_fonts/font = SubResource( 6 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/normal = SubResource( 10 )
+text = "접속"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[connection signal="pressed" from="Background_panel/Go_back" to="." method="_on_Go_back_pressed"]
+[connection signal="pressed" from="Background_panel/Server_ip_text_edit/Join_server" to="." method="_on_Join_server_pressed"]

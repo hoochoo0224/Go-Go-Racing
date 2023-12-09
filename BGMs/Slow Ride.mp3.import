@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Slow Ride.mp3-85c6eab0bbbdccb3b0b5e7b0c1942a8d.mp3str"
+
+[deps]
+
+source_file="res://BGMs/Slow Ride.mp3"
+dest_files=[ "res://.import/Slow Ride.mp3-85c6eab0bbbdccb3b0b5e7b0c1942a8d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/a-hero-of-the-80s.mp3-ad05740279ac8b3b417cc6b5b07a9a22.mp3str"
+
+[deps]
+
+source_file="res://BGMs/a-hero-of-the-80s.mp3"
+dest_files=[ "res://.import/a-hero-of-the-80s.mp3-ad05740279ac8b3b417cc6b5b07a9a22.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

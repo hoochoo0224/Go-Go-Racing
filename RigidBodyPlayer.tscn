@@ -1,0 +1,250 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Cars/car_0.png" type="Texture" id=1]
+[ext_resource path="res://BGMs/a-hero-of-the-80s.mp3" type="AudioStream" id=2]
+[ext_resource path="res://SoundEffects/Countdown.wav" type="AudioStream" id=3]
+[ext_resource path="res://BGMs/Slow Ride.mp3" type="AudioStream" id=4]
+[ext_resource path="res://RigidBodyPlayer.gd" type="Script" id=5]
+[ext_resource path="res://Font/Giants-Inline.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="PhysicsMaterial" id=3]
+friction = 0.0
+bounce = 2.0
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32.1429, 18.5714 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 50, 18.5714 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 32
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 5
+font_data = ExtResource( 6 )
+
+[sub_resource type="Animation" id=6]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/Countdown:custom_fonts/font:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 5 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CanvasLayer/Countdown:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ "2" ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CanvasLayer/Countdown:custom_colors/font_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.937255, 0.937255, 0.137255, 0 ) ]
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("CanvasLayer/Countdown:custom_colors/font_color:r")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0.937255, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("CanvasLayer/Countdown:custom_colors/font_color:g")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 0.937255, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("CanvasLayer/Countdown:custom_colors/font_color:b")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 0.137255, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("CanvasLayer/Countdown:custom_colors/font_color:a")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("AnimationPlayer/Countdown_SE:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "Timer"
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/Countdown:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "", "", "3", "", "2", "", "1", "", "Go!!", "" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CanvasLayer/Countdown:custom_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.937255, 0.937255, 0.137255, 0 ), Color( 0.937255, 0.937255, 0.137255, 0 ), Color( 0.937255, 0.937255, 0.137255, 1 ), Color( 0.937255, 0.937255, 0.137255, 0.607843 ), Color( 0.937255, 0.937255, 0.137255, 1 ), Color( 0.937255, 0.937255, 0.137255, 0.607843 ), Color( 0.937255, 0.937255, 0.137255, 1 ), Color( 0.937255, 0.937255, 0.137255, 0.607843 ), Color( 0.937255, 0.937255, 0.137255, 1 ), Color( 0.937255, 0.937255, 0.137255, 0.607843 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CanvasLayer/Countdown:custom_fonts/font:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 155 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationPlayer/Countdown_SE:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+
+[node name="RigidBodyPlayer" type="RigidBody2D"]
+mass = 4.0
+physics_material_override = SubResource( 3 )
+gravity_scale = 0.0
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="."]
+rotation = 1.5708
+z_index = 2
+texture = ExtResource( 1 )
+region_rect = Rect2( 99, 99, 0, 0 )
+
+[node name="DefaultCollision" type="CollisionPolygon2D" parent="."]
+rotation = 1.5708
+polygon = PoolVector2Array( -24, -64, 24, -64, 35, -52, 35, 52, 24, 64, -24, 64, -35, 52, -35, -52, -35, -52 )
+
+[node name="MiniCarCollision" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 0.71428, -1.74556e-06 )
+shape = SubResource( 1 )
+
+[node name="MotocycleCollision" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( -4.08717e-06, 6.81196e-07 )
+shape = SubResource( 2 )
+
+[node name="BOOSTer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Network_tick_rate" type="Timer" parent="."]
+wait_time = 0.03
+autostart = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 200, 0 )
+rotation = 1.5708
+z_index = 10
+limit_smoothed = true
+smoothing_enabled = true
+smoothing_speed = 9.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+
+[node name="Time" type="Label" parent="Camera2D/CanvasLayer"]
+margin_left = 842.0
+margin_top = 20.0
+margin_right = 990.0
+margin_bottom = 66.0
+custom_fonts/font = SubResource( 4 )
+text = "00:00:00"
+align = 1
+
+[node name="Countdown" type="Label" parent="Camera2D/CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -164.0
+margin_top = -110.0
+margin_right = 164.0
+margin_bottom = 110.0
+custom_colors/font_color = Color( 0.937255, 0.937255, 0.137255, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "2"
+align = 1
+valign = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D"]
+playback_speed = 0.2
+anims/RESET = SubResource( 6 )
+anims/Timer = SubResource( 7 )
+
+[node name="Countdown_SE" type="AudioStreamPlayer" parent="Camera2D/AnimationPlayer"]
+stream = ExtResource( 3 )
+
+[connection signal="timeout" from="Network_tick_rate" to="." method="_on_Network_tick_rate_timeout"]

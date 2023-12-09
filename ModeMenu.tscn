@@ -1,0 +1,151 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Font/Giants-Inline.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://ModeMenu.gd" type="Script" id=2]
+[ext_resource path="res://BGMs/Let's Go.mp3" type="AudioStream" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 44
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.764706, 0.607843, 0.196078, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.662745, 0.52549, 0.0862745, 1 )
+shadow_color = Color( 0.0823529, 0.172549, 0.168627, 0.6 )
+shadow_size = 5
+shadow_offset = Vector2( 4, 4 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.764706, 0.607843, 0.196078, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.662745, 0.52549, 0.0862745, 1 )
+shadow_color = Color( 0.0823529, 0.172549, 0.168627, 0.6 )
+shadow_size = 3
+shadow_offset = Vector2( 2, 2 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0.764706, 0.607843, 0.196078, 1 )
+shadow_color = Color( 0.0823529, 0.172549, 0.168627, 0.6 )
+shadow_size = 5
+shadow_offset = Vector2( 4, 4 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 22
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.196078, 0.764706, 0.760784, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.0862745, 0.662745, 0.631373, 1 )
+shadow_color = Color( 0.0823529, 0.172549, 0.168627, 0.6 )
+shadow_size = 5
+shadow_offset = Vector2( 4, 4 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.196078, 0.764706, 0.760784, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.0862745, 0.662745, 0.631373, 1 )
+shadow_color = Color( 0.0823529, 0.172549, 0.168627, 0.6 )
+shadow_size = 3
+shadow_offset = Vector2( 2, 2 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.196078, 0.764706, 0.760784, 1 )
+shadow_color = Color( 0.0823529, 0.172549, 0.168627, 0.6 )
+shadow_size = 5
+shadow_offset = Vector2( 4, 4 )
+
+[node name="ModeMenu" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.65098, 0.788235, 0.796078, 0.686275 )
+
+[node name="Button1" type="Button" parent="ColorRect"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 28.0
+margin_top = -50.0
+margin_right = 328.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = SubResource( 11 )
+custom_styles/pressed = SubResource( 12 )
+custom_styles/normal = SubResource( 13 )
+text = "레벨 깨기"
+
+[node name="Button2" type="Button" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -150.0
+margin_top = -50.0
+margin_right = 150.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = SubResource( 11 )
+custom_styles/pressed = SubResource( 12 )
+custom_styles/normal = SubResource( 13 )
+text = "도망쳐! 모드"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Button3" type="Button" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 181.0
+margin_top = -50.0
+margin_right = 481.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = SubResource( 11 )
+custom_styles/pressed = SubResource( 12 )
+custom_styles/normal = SubResource( 13 )
+text = "온라인 경주"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="BackButton" type="Button" parent="ColorRect"]
+margin_left = 924.0
+margin_top = 12.0
+margin_right = 1011.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/normal = SubResource( 10 )
+text = "뒤로"
+icon_align = 1
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 3 )
+autoplay = true
+
+[connection signal="pressed" from="ColorRect/Button1" to="." method="_on_Button1_pressed"]
+[connection signal="pressed" from="ColorRect/Button1" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="ColorRect/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="ColorRect/Button2" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="ColorRect/Button3" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="ColorRect/Button3" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="ColorRect/BackButton" to="." method="_on_BackButton_pressed"]

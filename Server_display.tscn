@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Server_display.gd" type="Script" id=1]
+
+[node name="Server_display" type="Label" groups=["Server_display"]]
+margin_right = 40.0
+margin_bottom = 14.0
+script = ExtResource( 1 )
+
+[node name="Join_button" type="Button" parent="."]
+margin_right = 12.0
+margin_bottom = 20.0
+
+[connection signal="pressed" from="Join_button" to="." method="_on_Join_button_pressed"]
